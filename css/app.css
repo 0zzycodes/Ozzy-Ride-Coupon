@@ -38,7 +38,7 @@ ul li {
   text-transform: uppercase;
 }
 header {
-  height: 100vh;
+  height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.363)),
     url('../assets/hero.jpg');
   background-size: cover;
@@ -79,8 +79,14 @@ header {
 .logo img {
   width: 40px;
 }
+.menu {
+  display: none;
+}
+.menu img {
+  width: 45px;
+}
 .hero {
-  height: calc(100vh - 95px);
+  height: calc(90vh - 95px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,4 +137,30 @@ form input[type='text']:valid ~ label {
 form .btn {
   border-radius: 0px;
   padding: 6px 30px;
+}
+
+@media (max-width: 930px) {
+  form {
+    flex-direction: column;
+  }
+  label {
+    bottom: 3.8em;
+  }
+  form input[type='text']:focus ~ label,
+  form input[type='text']:valid ~ label {
+    bottom: 7.4em;
+  }
+  form .btn {
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .nav-link {
+    display: none;
+  }
+  .menu {
+    margin-top: 12px;
+    display: block;
+  }
 }
