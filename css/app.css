@@ -65,13 +65,16 @@ header {
   color: var(--primaryColor);
 }
 .navbar {
+  position: relative;
   display: flex;
-  height: 95px;
+  /* height: 95px; */
+  padding: 10px 0px;
   width: 85%;
   margin: auto;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--mainWhite);
+  transition: all 1s ease-out;
 }
 .logo {
   font-size: x-large;
@@ -84,10 +87,14 @@ header {
   width: 40px;
   margin-bottom: 15px;
 }
-.menu {
+#menu {
   display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 17px;
 }
-.menu img {
+#menu img {
   width: 45px;
 }
 .hero {
@@ -146,6 +153,9 @@ form .btn {
 }
 
 @media (max-width: 930px) {
+  header {
+    height: 100vh;
+  }
   .navbar {
     width: 90%;
   }
@@ -168,8 +178,23 @@ form .btn {
   .nav-link {
     display: none;
   }
-  .menu {
+  #menu {
     margin-top: 12px;
     display: block;
   }
+}
+.column {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.show {
+  display: block;
+}
+.show li {
+  display: block;
+  margin: 15px;
+}
+.show li:last-child {
+  margin-top: 25px;
 }
