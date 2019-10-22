@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 :root {
-  --primaryColor: #f09d51;
+  --primaryColor: #f46554;
   --mainWhite: #fff;
   --mainWhiteTrans: #ffffff85;
   --mainBlack: #222;
@@ -34,13 +34,14 @@ ul li {
   list-style: none;
   display: inline;
   margin: 0 15px;
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: 500;
   text-transform: uppercase;
 }
 header {
   height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.363)),
-    url('../assets/hero.jpg');
+    url('../assets/heroBG.jpg');
   background-size: cover;
   background-position: center;
   color: var(--mainWhite);
@@ -49,10 +50,10 @@ header {
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
-  font-size: 1rem;
+  font-size: 14px;
   background: var(--primaryColor);
   color: var(--mainBlack);
-  font-weight: 600;
+  font-weight: 500;
   border: 2px solid var(--primaryColor);
   border-radius: 4px;
   transition: var(--mainTransition);
@@ -66,18 +67,22 @@ header {
 .navbar {
   display: flex;
   height: 95px;
-  width: 80%;
+  width: 85%;
   margin: auto;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--mainWhite);
 }
 .logo {
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
 }
 .logo img {
   width: 40px;
+  margin-bottom: 15px;
 }
 .menu {
   display: none;
@@ -102,7 +107,8 @@ header {
 .search-block {
   max-width: 800px;
   background-color: var(--mainGreyTrans);
-  padding: 10px;
+  padding: 15px;
+  border-radius: 5px;
 }
 form {
   position: relative;
@@ -128,7 +134,7 @@ form input[type='text'] {
 }
 form input[type='text']:focus ~ label,
 form input[type='text']:valid ~ label {
-  bottom: 4em;
+  bottom: 4.3em;
   left: 1.3em;
   font-weight: 600;
   font-size: 0.8em;
@@ -140,6 +146,9 @@ form .btn {
 }
 
 @media (max-width: 930px) {
+  .navbar {
+    width: 90%;
+  }
   form {
     flex-direction: column;
   }
@@ -148,7 +157,7 @@ form .btn {
   }
   form input[type='text']:focus ~ label,
   form input[type='text']:valid ~ label {
-    bottom: 7.4em;
+    bottom: 7.8em;
   }
   form .btn {
     margin-top: 10px;
