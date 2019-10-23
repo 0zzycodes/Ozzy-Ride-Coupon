@@ -41,7 +41,7 @@ ul li {
 header {
   height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.363)),
-    url('../assets/hero.jpg');
+    url('../assets/heroBG.jpg');
   background-size: cover;
   background-position: center;
   color: var(--mainWhite);
